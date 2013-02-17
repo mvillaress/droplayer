@@ -1,0 +1,16 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "lib/oauth.js" %>
+<% end %>
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<% if session[:dropbox_session] %>
+  <h1><%= session[:dropbox_session] %></h1>
+<% end %>
+
+
+<input type="button" value="Busca!" id="mybtn"/>
+<audio id="myaudio" controls=""></audio>
+<ul id="mylist"></ul>
